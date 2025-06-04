@@ -1,12 +1,44 @@
 :root {
+  --ff-montserrat: 'Montserrat', 'Arial', sans-serif;
+
+  --color-primary: #ffffff;
+  --color-primary-inverted: #000000;
+  --color-bg-basic: #343d4b;
+  --color-bg-card: #272e37;
+  --gradient: linear-gradient(
+    131deg,
+    rgba(144, 217, 224, 0.9) 0%,
+    rgba(84, 96, 230, 0.9) 100%
+  );
+  --gradient-inverted: linear-gradient(
+    231deg,
+    rgba(144, 217, 224, 0.9) 0%,
+    rgba(84, 96, 230, 0.9) 100%
+  );
+  --gradient-overlay: linear-gradient(
+    136deg,
+    rgba(136, 235, 239, 0.9) 0%,
+    rgba(83, 91, 230, 0.9) 100%
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-montserrat);
+  font-weight: normal;
+  line-height: 1.2;
+  font-size: 20px;
+  background-color: var(--color-bg-basic);
+  color: var(--color-primary);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
