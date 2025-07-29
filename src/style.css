@@ -4,7 +4,10 @@
   --color-primary: #ffffff;
   --color-primary-inverted: #000000;
   --color-bg-basic: #343d4b;
+  --color-bg-main: #222831;
   --color-bg-card: #272e37;
+  --color-bg-hover: #3a434f;
+  --color-placeholder: #3f4958;
   --gradient: linear-gradient(
     131deg,
     rgba(144, 217, 224, 0.9) 0%,
@@ -29,6 +32,9 @@
 }
 
 body {
+  display: grid;
+  place-items: center;
+  height: 100dvb;
   margin: 0;
   font-family: var(--ff-montserrat);
   font-weight: normal;
