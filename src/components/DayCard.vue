@@ -40,7 +40,7 @@ const { weatherCode, temperature, data } = defineProps({
   justify-content: center;
   justify-items: center;
   width: 100%;
-  padding: 12px 23px 19px;
+  padding: 15px 26px;
   color: var(--color-primary);
   background-color: var(--color-bg-card);
   box-shadow: 1px 2px 4px 0 var(--color-bg-main);
@@ -59,7 +59,12 @@ const { weatherCode, temperature, data } = defineProps({
   color: var(--color-primary-inverted);
 }
 
+.day-card__day {
+  font-size: 16px;
+}
+
 .day-card__temperature {
   font-weight: 700;
+  font-size: 18px;
 }
 </style>

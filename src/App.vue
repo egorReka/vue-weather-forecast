@@ -9,6 +9,7 @@ const data = ref();
 const error = ref();
 const activeIndex = ref(0);
 const city = ref('Москва');
+
 provide(cityProvide, city);
 
 async function getCity(city) {
@@ -29,8 +30,6 @@ async function getCity(city) {
 
   error.value = null;
   data.value = await res.json();
-
-  // console.log(data.value);
 }
 watch(city, () => {
   getCity(city.value);
@@ -40,7 +39,11 @@ onMounted(() => getCity(city.value));
 
 <template>
   <main class="main">
-    <PaneLeft />
+    <PaneLeft 
+      v-if="data" 
+      :day-data="data.forecast.forecastday[activeIndex]"
+      :city="city"
+    />
     <PaneRight
       :data="data"
       :error="error"

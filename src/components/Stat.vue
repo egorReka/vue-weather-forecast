@@ -24,14 +24,16 @@ const { label = 'Не задан', stat } = defineProps({
 
 .stat__label {
   margin: 0;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .stat__value {
+  align-self: flex-end;
   margin: 0;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 24px;
+  white-space: nowrap;
 }
 </style>

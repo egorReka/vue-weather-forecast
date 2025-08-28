@@ -1,5 +1,5 @@
 <script setup>
-const { size = 54 } = defineProps({
+const { size = 64 } = defineProps({
   color: String,
   size: Number,
 });
@@ -7,12 +7,11 @@ const { size = 54 } = defineProps({
 
 <template>
   <svg
-    width="56"
-    height="55"
+    :width="size"
+    :height="size"
     viewBox="0 0 56 55"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
-    :style="{ scale: size / 54 }"
   >
     <path
       d="M28.0048 3.54557C28.9449 3.54557 29.707 4.30134 29.707 5.23363V7.48438C29.707 8.41666 28.9449 9.17243 28.0048 9.17243C27.0647 9.17243 26.3026 8.41666 26.3026 7.48438V5.23363C26.3026 4.30134 27.0647 3.54557 28.0048 3.54557Z"
