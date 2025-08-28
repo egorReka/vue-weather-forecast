@@ -1,5 +1,5 @@
 <script setup>
-const { size = 54 } = defineProps({
+const { size = 64 } = defineProps({
   color: String,
   size: Number,
 });
@@ -7,12 +7,11 @@ const { size = 54 } = defineProps({
 
 <template>
   <svg
-    width="54"
-    height="54"
+    :width="size"
+    :height="size"
     viewBox="0 0 54 54"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
-    :style="{ scale: size / 54 }"
   >
     <g clip-path="url(#clip0_4_33)">
       <path

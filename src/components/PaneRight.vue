@@ -7,8 +7,8 @@ import DayCard from '../components/DayCard.vue';
 import { errorMap } from '../constats';
 
 const { data, error, activeIndex } = defineProps({
-  error: Object,
   data: Object,
+  error: Object,
   activeIndex: Number,
 });
 
@@ -22,15 +22,15 @@ const statData = computed(() => {
   return [
     {
       label: 'Влажность',
-      stat: data.current.humidity + ' %',
+      stat: data.forecast.forecastday[activeIndex].day.avghumidity + ' %',
     },
     {
-      label: 'Облачность',
-      stat: data.current.cloud + ' %',
+      label: 'Вероятность дождя',
+      stat: data.forecast.forecastday[activeIndex].day.daily_chance_of_rain + ' %',
     },
     {
       label: 'Ветер',
-      stat: data.current.wind_kph + ' км/ч',
+      stat: data.forecast.forecastday[activeIndex].day.maxwind_kph + ' км/ч',
     },
   ];
 });
@@ -73,6 +73,7 @@ const errorDisplay = computed(() => {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  row-gap: 20px;
   min-height: 623px;
   padding: 55px 60px;
   border-radius: 0 25px 25px 0;
@@ -102,6 +103,7 @@ const errorDisplay = computed(() => {
 
 .days {
   display: flex;
+  flex-wrap: wrap;
   gap: 1px;
   margin: 0;
   padding: 0;
